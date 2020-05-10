@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="200.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.ConnexionController">
+   <children>
+      <Button fx:id="button_connexion" layoutX="239.0" layoutY="309.0" minWidth="60.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="123.0" style="-fx-background-color: green;" text="Connexion" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="309.0" />
+      <Text layoutX="111.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accueil - Connexion" textAlignment="CENTER" wrappingWidth="378.21875" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="199.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifiant" wrappingWidth="57.21875" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="155.0" />
+      <TextField fx:id="field_id" layoutX="199.0" layoutY="174.0" onAction="#login" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="174.0" />
+      <Label fx:id="info_id" layoutX="391.0" layoutY="150.0" onMouseClicked="#help_id" onMouseDragged="#help_id" onMouseEntered="#help_id" onMousePressed="#help_id" text="ⓘ" textFill="#1400f5" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="170.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="err_id" fill="#f80000" layoutX="401.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erreur d'identifiant" visible="false" wrappingWidth="176.21875" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="155.0" />
+      <Text layoutX="199.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" wrappingWidth="83.00000242888927" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="229.0" />
+      <PasswordField fx:id="field_mdp" layoutX="199.0" layoutY="249.0" onAction="#login" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="249.0" />
+      <Text fx:id="err_id1" fill="#f80000" layoutX="418.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erreur de mot de passe" visible="false" wrappingWidth="176.21875" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="229.05078125" />
+      <HBox layoutX="197.0" layoutY="115.0" prefHeight="22.0" prefWidth="246.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="115.0">
+         <children>
+            <RadioButton fx:id="radioChercheur" mnemonicParsing="false" text="Chercheur">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="type" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioTechnicien" mnemonicParsing="false" prefHeight="19.0" prefWidth="124.0" text="Technicien" toggleGroup="$type">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </HBox>
+      <Label fx:id="info_mdp" layoutX="410.0" layoutY="267.0" onMouseClicked="#help_mdp" onMouseDragged="#help_mdp" onMouseEntered="#help_mdp" onMousePressed="#help_mdp" text="ⓘ" textFill="#1400f5" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>
