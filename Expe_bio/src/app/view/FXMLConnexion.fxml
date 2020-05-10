@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.ConnexionController">
+   <children>
+      <Button fx:id="button_connexion" layoutX="235.0" layoutY="285.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="123.0" style="-fx-background-color: green;" text="Connexion" textFill="WHITE" />
+      <Text layoutX="111.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accueil - Connexion" textAlignment="CENTER" wrappingWidth="378.21875">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="217.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifiant" wrappingWidth="106.21875" />
+      <TextField fx:id="field_id" layoutX="217.0" layoutY="152.0" onAction="#login" />
+      <Label fx:id="info_id" layoutX="391.0" layoutY="150.0" onMouseClicked="#help_id" onMouseDragged="#help_id" onMouseEntered="#help_id" onMousePressed="#help_id" text="ⓘ" textFill="#1400f5">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="err_id" fill="#f80000" layoutX="401.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erreur d'identifiant" textAlignment="CENTER" visible="false" wrappingWidth="176.21875" />
+      <Text layoutX="217.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" wrappingWidth="106.21875" />
+      <PasswordField fx:id="field_mdp" layoutX="217.0" layoutY="224.0" onAction="#login" />
+      <Text fx:id="err_id1" fill="#f80000" layoutX="418.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erreur de mot de passe" textAlignment="CENTER" visible="false" wrappingWidth="176.21875" />
+      <Label fx:id="info_mdp" layoutX="392.0" layoutY="224.0" onMouseClicked="#help_mdp" onMouseDragged="#help_mdp" onMouseEntered="#help_mdp" onMousePressed="#help_mdp" prefHeight="26.0" prefWidth="20.0" text="ⓘ" textFill="#1400f5">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="mdp_help" fill="#2603eb" layoutX="218.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe oublié ? " underline="true" visible="false" wrappingWidth="167.13671875" />
+   </children>
+</AnchorPane>
