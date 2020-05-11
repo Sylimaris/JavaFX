@@ -23,7 +23,7 @@
                         <Button layoutX="499.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleDeconnexion" text="Déconnexion" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
                      </children>
                   </AnchorPane>
-                  <Button layoutX="21.0" layoutY="49.0" mnemonicParsing="false" text="Ajout expérience" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="49.0" />
+                  <Button layoutX="21.0" layoutY="49.0" mnemonicParsing="false" onAction="#ajoutExp" text="Ajout expérience" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="49.0" />
                   <Button fx:id="ExpDemandee" layoutX="147.0" layoutY="49.0" mnemonicParsing="false" stylesheets="@KizameTheme.css" text="Expériences demandées" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="49.0" />
                </children>
             </AnchorPane>

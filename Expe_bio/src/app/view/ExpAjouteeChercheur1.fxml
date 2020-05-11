@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane stylesheets="@KizameTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane stylesheets="@KizameTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.ExpAjouteeChercheur1Controller">
    <children>
       <AnchorPane layoutX="-61.0" prefHeight="400.0" prefWidth="600.0" styleClass="background_Anchor_text" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,11 +23,11 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Button layoutX="518.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Déconnexion" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <Button layoutX="518.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleDeconnexion" prefHeight="25.0" prefWidth="97.0" text="Déconnexion" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
                      </children>
                   </AnchorPane>
-                  <Button layoutX="21.0" layoutY="63.0" mnemonicParsing="false" text="Ajout expérience" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="49.0" />
-                  <Button layoutX="147.0" layoutY="60.0" mnemonicParsing="false" text="Expérience demandée" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="49.0" />
+                  <Button fx:id="ExpAjoutee" layoutX="21.0" layoutY="63.0" mnemonicParsing="false" text="Ajout expérience" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="49.0" />
+                  <Button layoutX="147.0" layoutY="60.0" mnemonicParsing="false" onAction="#retourExpDemandee" text="Expérience demandée" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="49.0" />
                </children>
             </AnchorPane>
             <Label layoutX="39.0" layoutY="116.0" text="Ajout d'expérience (1/2)" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="115.0">
@@ -70,15 +70,15 @@
                   <RadioButton mnemonicParsing="false" text="Opacimétrique" textFill="WHITE" toggleGroup="$Group_type" />
                </children>
             </HBox>
-            <AutoCompleteTextField layoutX="124.0" layoutY="319.0" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="320.0" />
             <TextField layoutX="456.0" layoutY="118.0" prefHeight="21.0" prefWidth="76.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="120.0" />
             <TextField layoutX="440.0" layoutY="208.0" prefHeight="21.0" prefWidth="76.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="210.0" />
             <TextField layoutX="462.0" layoutY="235.0" prefHeight="21.0" prefWidth="76.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="240.0" />
             <TextField layoutX="462.0" layoutY="277.0" prefHeight="21.0" prefWidth="76.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="280.0" />
             <TextField layoutX="467.0" layoutY="308.0" prefHeight="21.0" prefWidth="76.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="310.0" />
             <TextField layoutX="465.0" layoutY="331.0" prefHeight="21.0" prefWidth="76.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="340.0" />
-            <Button layoutX="246.0" layoutY="361.0" mnemonicParsing="false" text="Annuler" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="210.0" />
-            <Button layoutX="309.0" layoutY="361.0" mnemonicParsing="false" text="Suivant" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0" />
+            <Button layoutX="246.0" layoutY="361.0" mnemonicParsing="false" onAction="#retourExpDemandee" text="Annuler" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="210.0" />
+            <Button layoutX="309.0" layoutY="361.0" mnemonicParsing="false" onAction="#demandeExp2" text="Suivant" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0" />
+            <ChoiceBox layoutX="152.0" layoutY="323.0" prefWidth="150.0" AnchorPane.leftAnchor="160.0" />
          </children>
       </AnchorPane>
       <Label layoutX="40.0" layoutY="158.0" prefHeight="17.0" prefWidth="86.0" text="Indice priorité" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="180.0" />

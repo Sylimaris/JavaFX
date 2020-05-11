@@ -180,7 +180,7 @@ public class MainApp extends Application {
 
 	        ExpDemandeeChercheurController controller = loader.getController();
 	        controller.setMainApp(this);
-	        controller.initialize();
+	        controller.initializeAll(id);
 	        currentPage = "ChercheurExpDemandee";
 
 	        return controller;
@@ -192,29 +192,43 @@ public class MainApp extends Application {
     }
 
 
-
-    /**
-     * Technicien Overview
-     */
-    public TechnicienGestionExpController showTechnicienGestionExp (int id)
+    public ExpAjouteeChercheur1Controller showExpAjouteeChercheur1(int id)
     {
     	try {
-	    	//Charge la page du technicien
+	    	//Charge la page de demande exp chercheur 1
 			FXMLLoader loader = new FXMLLoader();
-	        loader.setLocation(MainApp.class.getResource("view/TechnicienGestionExp.fxml"));
-	        AnchorPane technicienGestionExp = (AnchorPane) loader.load();
+	        loader.setLocation(MainApp.class.getResource("view/ExpAjouteeChercheur1.fxml"));
+	        AnchorPane ExpAjouteeChercheur1 = (AnchorPane) loader.load();
 
-	        getRootLayout().setCenter(technicienGestionExp);
+	        getRootLayout().setCenter(ExpAjouteeChercheur1);
 
-	        //Affiche les données correspondant technicien
-	        	//Récupération du controller
-	        TechnicienGestionExpController controller = loader.getController();
+	        ExpAjouteeChercheur1Controller controller = loader.getController();
 	        controller.setMainApp(this);
+	        controller.initializeAll(id);
+	        currentPage = "Demande1";
 
-	        //Affiche les informations du technicien connecté
-	        //controller.initialize(id); //DANS TechnicienGestionExpController
+	        return controller;
+    	}
+    	catch (IOException e) {
+    		e.printStackTrace();
+    		return null;
+    	}
+    }
 
-	        currentPage = "TechnicienGestionExp";
+    public ExpAjouteeChercheur2Controller showExpAjouteeChercheur2(int id)
+    {
+    	try {
+	    	//Charge la page de demande exp chercheur 2
+			FXMLLoader loader = new FXMLLoader();
+	        loader.setLocation(MainApp.class.getResource("view/ExpAjouteeChercheur2.fxml"));
+	        AnchorPane ExpAjouteeChercheur2 = (AnchorPane) loader.load();
+
+	        getRootLayout().setCenter(ExpAjouteeChercheur2);
+
+	        ExpAjouteeChercheur2Controller controller = loader.getController();
+	        controller.setMainApp(this);
+	        controller.initializeAll(id);
+	        currentPage = "Demande2";
 
 	        return controller;
     	}
@@ -225,6 +239,19 @@ public class MainApp extends Application {
     }
 
 
+    /**
+     * Shows an informing alert.
+     */
+    public void showInfo(String title, String header, String content, Stage owner)
+    {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.initOwner(owner);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+
+        alert.showAndWait();
+    }
 
 
 

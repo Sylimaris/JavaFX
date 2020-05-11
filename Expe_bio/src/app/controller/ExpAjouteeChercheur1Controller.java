@@ -5,12 +5,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 
-public class ExpDemandeeChercheurController {
+
+public class ExpAjouteeChercheur1Controller {
 	private int idChercheur;
 	@FXML
-	private Button ExpDemandee;
-	@FXML
-	private Button Deco;
+	private Button ExpAjoutee;
 
 	private MainApp mainApp;
 
@@ -24,14 +23,21 @@ public class ExpDemandeeChercheurController {
 	}
 	@FXML
 	public void initialize(){
-		ExpDemandee.setDisable(true);
+		ExpAjoutee.setDisable(true);
 	}
 	@FXML
 	private void handleDeconnexion() {
 		mainApp.showConnexion();
 	}
+
 	@FXML
-	private void ajoutExp() {
-		mainApp.showExpAjouteeChercheur1(idChercheur);
+	private void demandeExp2() {
+		mainApp.showExpAjouteeChercheur2(idChercheur);
 	}
+
+	@FXML
+	private void retourExpDemandee() {
+		mainApp.showChercheurExpDemandeeController(idChercheur);
+	}
+
 }
