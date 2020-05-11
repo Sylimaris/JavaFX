@@ -66,7 +66,9 @@ public class MainApp extends Application {
 
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Expe_Bio");
-        this.primaryStage.getIcons().add(new Image(MainApp.class.getResourceAsStream( "../ressources/images/logo.png")));
+        this.primaryStage.getIcons().add(new Image(MainApp.class.getResourceAsStream( "../ressources/images/logoApp.png")));
+        this.primaryStage.setMinHeight(480);
+        this.primaryStage.setMinWidth(640);
         initRootLayout();
         showConnexion();
 	}
@@ -162,6 +164,35 @@ public class MainApp extends Application {
         }
     }
 
+
+    /**
+     * Chercheur Overview
+     */
+    public ExpDemandeeChercheurController showChercheurExpDemandeeController (int id)
+    {
+    	try {
+	    	//Charge la page du chercheur
+			FXMLLoader loader = new FXMLLoader();
+	        loader.setLocation(MainApp.class.getResource("view/ExpDemandeeChercheur.fxml"));
+	        AnchorPane ExpDemandeeChercheur = (AnchorPane) loader.load();
+
+	        getRootLayout().setCenter(ExpDemandeeChercheur);
+
+	        ExpDemandeeChercheurController controller = loader.getController();
+	        controller.setMainApp(this);
+	        controller.initialize();
+	        currentPage = "ChercheurExpDemandee";
+
+	        return controller;
+    	}
+    	catch (IOException e) {
+    		e.printStackTrace();
+    		return null;
+    	}
+    }
+
+
+
     /**
      * Technicien Overview
      */
@@ -192,40 +223,6 @@ public class MainApp extends Application {
     		return null;
     	}
     }
-
-    /**
-     * Chercheur Overview
-     */
-    public ExpDemandeesChercheurController showChercheurExpDemandeesController (int id)
-    {
-    	try {
-	    	//Charge la page du chercheur
-			FXMLLoader loader = new FXMLLoader();
-	        loader.setLocation(MainApp.class.getResource("view/ExpDemandeesChercheur.fxml"));
-	        AnchorPane ExpDemandeesChercheur = (AnchorPane) loader.load();
-
-	        getRootLayout().setCenter(ExpDemandeesChercheur);
-
-	        //Affiche les données correspondant technicien
-	        	//Récupération du controller
-	        ExpDemandeesChercheurController controller = loader.getController();
-	        controller.setMainApp(this);
-
-	        //Affiche les informations du technicien connecté
-	        //controller.initialize(id); //DANS GestionExpController
-
-	        currentPage = "TechnicienGestionExp";
-
-	        return controller;
-    	}
-    	catch (IOException e) {
-    		e.printStackTrace();
-    		return null;
-    	}
-    }
-
-
-
 
 
 
@@ -258,7 +255,6 @@ public class MainApp extends Application {
     public BorderPane getRootLayout() {
     	return rootLayout;
     }
-
 
     /**
      * Returns the ods.

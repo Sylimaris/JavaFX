@@ -1,0 +1,49 @@
+
+
+.background_Anchor_text {
+    -fx-background-color: #1D6284;}
+
+.background_Anchor_en_tete {
+    -fx-background-color: #5AADD6;}
+
+.background_Anchor_titre {
+    -fx-background-color: #18475F;}
+
+.label {
+    -fx-font-size: 9pt;
+    -fx-text-fill: #fff;}
+
+.table-view {
+    -fx-base: #18475F;
+    -fx-control-inner-background: #18475F;
+    -fx-background-color: #18475F;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;}
+
+.table-view .column-header, .table-view .filler {
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-insets: 0 10 1 0;}
+
+.table-view .column-header .label {
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;}
+
+.button {
+    -fx-border-color: #fff;  /* couleur bordure bouton */
+    -fx-background-color: #1D6284;  /* couleur bouton */ 
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-text-fill: #fff;  /* couleur text bouton */
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;}
+
+
+

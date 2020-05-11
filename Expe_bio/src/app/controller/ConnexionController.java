@@ -40,13 +40,12 @@ public class ConnexionController{
     private Label info_mdp;
     @FXML
     private Text mdp_help;
-
-	private MainApp mainApp;
-
     @FXML
     private RadioButton radioChercheur;
     @FXML
     private RadioButton radioTechnicien;
+
+	private MainApp mainApp;
 
 
     /**
@@ -94,7 +93,7 @@ public class ConnexionController{
         		for (Chercheur c : mainApp.getChercheurs()){
         			if (c.getMail().equals(id)){
         				loginValide = true;
-        				ExpDemandeesChercheurController controller = mainApp.showChercheurExpDemandeesController(c.getId());
+        				mainApp.showChercheurExpDemandeeController(c.getId());
         			}
         	    }
         	}

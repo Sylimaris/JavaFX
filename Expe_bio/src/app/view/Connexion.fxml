@@ -7,33 +7,42 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="200.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.ConnexionController">
+<AnchorPane prefHeight="341.0" prefWidth="766.0" styleClass="background_Anchor_text" stylesheets="@KizameTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.ConnexionController">
    <children>
-      <Button fx:id="button_connexion" layoutX="239.0" layoutY="309.0" minWidth="60.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="123.0" style="-fx-background-color: green;" text="Connexion" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="309.0" />
-      <Text layoutX="111.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accueil - Connexion" textAlignment="CENTER" wrappingWidth="378.21875" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="20.0">
+      <Circle fill="WHITE" layoutX="94.0" layoutY="201.0" radius="42.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="button_connexion" alignment="CENTER" layoutX="245.0" layoutY="316.0" mnemonicParsing="false" onAction="#login" text="Connexion" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="93.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accueil - Connexion" textAlignment="CENTER" wrappingWidth="378.21875">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="199.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifiant" wrappingWidth="57.21875" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="155.0" />
-      <TextField fx:id="field_id" layoutX="199.0" layoutY="174.0" onAction="#login" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="174.0" />
-      <Label fx:id="info_id" layoutX="391.0" layoutY="150.0" onMouseClicked="#help_id" onMouseDragged="#help_id" onMouseEntered="#help_id" onMousePressed="#help_id" text="ⓘ" textFill="#1400f5" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="170.0">
+      <Text fill="WHITE" layoutX="199.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifiant" wrappingWidth="57.21875" />
+      <TextField fx:id="field_id" alignment="CENTER" layoutX="199.0" layoutY="167.0" onAction="#login" />
+      <Label fx:id="info_id" layoutX="372.0" layoutY="162.0" onMouseClicked="#help_id" onMouseDragged="#help_id" onMouseEntered="#help_id" onMousePressed="#help_id" text="ⓘ" textFill="#1400f5">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Text fx:id="err_id" fill="#f80000" layoutX="401.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erreur d'identifiant" visible="false" wrappingWidth="176.21875" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="155.0" />
-      <Text layoutX="199.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" wrappingWidth="83.00000242888927" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="229.0" />
-      <PasswordField fx:id="field_mdp" layoutX="199.0" layoutY="249.0" onAction="#login" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="249.0" />
-      <Text fx:id="err_id1" fill="#f80000" layoutX="418.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erreur de mot de passe" visible="false" wrappingWidth="176.21875" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="229.05078125" />
-      <HBox layoutX="197.0" layoutY="115.0" prefHeight="22.0" prefWidth="246.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="115.0">
+      <Text fx:id="err_id" fill="#f80000" layoutX="423.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erreur d'identifiant" textAlignment="CENTER" visible="false" wrappingWidth="176.21875" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="200.0" />
+      <Text fill="WHITE" layoutX="199.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" wrappingWidth="83.00000242888927" />
+      <PasswordField fx:id="field_mdp" alignment="CENTER" layoutX="199.0" layoutY="241.0" onAction="#login" />
+      <Text fx:id="err_id1" fill="#f80000" layoutX="423.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erreur de mot de passe" textAlignment="CENTER" visible="false" wrappingWidth="176.21875" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="270.0" />
+      <Label fx:id="info_mdp" layoutX="372.0" layoutY="241.0" onMouseClicked="#help_mdp" onMouseDragged="#help_mdp" onMouseEntered="#help_mdp" onMousePressed="#help_mdp" prefHeight="25.0" prefWidth="12.0" text="ⓘ" textFill="#1400f5">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="197.0" layoutY="100.0">
          <children>
-            <RadioButton fx:id="radioChercheur" mnemonicParsing="false" text="Chercheur">
+            <RadioButton fx:id="radioChercheur" mnemonicParsing="false" text="Chercheur" textFill="WHITE">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
@@ -41,10 +50,10 @@
                   <Font size="13.0" />
                </font>
                <toggleGroup>
-                  <ToggleGroup fx:id="type" />
+                  <ToggleGroup fx:id="Group_connexion" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="radioTechnicien" mnemonicParsing="false" prefHeight="19.0" prefWidth="124.0" text="Technicien" toggleGroup="$type">
+            <RadioButton fx:id="radioTechnicien" mnemonicParsing="false" text="Technicien" textFill="WHITE" toggleGroup="$Group_connexion">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
@@ -54,13 +63,10 @@
             </RadioButton>
          </children>
       </HBox>
-      <Label fx:id="info_mdp" layoutX="410.0" layoutY="267.0" onMouseClicked="#help_mdp" onMouseDragged="#help_mdp" onMouseEntered="#help_mdp" onMousePressed="#help_mdp" text="ⓘ" textFill="#1400f5" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="250.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
+      <ImageView fitHeight="113.0" fitWidth="161.0" layoutX="37.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../ressources/images/logo.png" />
+         </image>
+      </ImageView>
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
 </AnchorPane>

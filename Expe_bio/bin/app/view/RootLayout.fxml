@@ -3,5 +3,5 @@
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane minWidth="400.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.RootLayoutController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.RootLayoutController">
 </BorderPane>
